@@ -11,7 +11,8 @@
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.8",
+    "styled-components": "^2.2.4"
   },
   "scripts": {
     "lint": "eslint src",
@@ -19,13 +20,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./src/styles src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",
     "jest-enzyme": "^4.0.1",
+    "node-sass-chokidar": "0.0.3",
     "react-test-renderer": "^16.1.1"
   }
 }

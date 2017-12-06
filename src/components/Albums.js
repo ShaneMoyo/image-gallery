@@ -3,6 +3,7 @@ import albumsAPI from '../services/albumsAPI';
 import { onDeleteAlbum, onAddAlbum, loadAlbums } from './actions';
 import AddAlbum from './add-album';
 import { NavLink } from 'react-router-dom';
+import './Albums.css';
 
 const Link = props => <NavLink {...props}
   className="nav-link"
@@ -47,7 +48,7 @@ export default class Albums extends PureComponent {
     });
     return (
       <div>
-        <ul>
+        <ul className="albumsList">
           {albumList}
         </ul>
         <AddAlbum handleAdd={album => this.handleAdd(album)} />
