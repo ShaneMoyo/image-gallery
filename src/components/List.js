@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import AddImage from './add-image';
+import './List.css';
 
 
 export default class List extends PureComponent {
@@ -11,7 +12,7 @@ export default class List extends PureComponent {
             <tr key={i}>
               <td><a href={image.url}>{image.title}</a></td>
               <td>
-                <input data-value={image._id} type="button" value="X"
+                <input className="is-large" data-value={image._id} type="button" value="X"
                   onClick ={({ target }) => handleDelete(target.dataset.value)}/>
               </td>
             </tr>;
