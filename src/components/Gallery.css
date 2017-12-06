@@ -1,0 +1,5 @@
+:local(.gallery) ul {
+  margin: 10px;
+  padding: 0; }
+  :local(.gallery) ul li.gallery {
+    color: steelblue; }
