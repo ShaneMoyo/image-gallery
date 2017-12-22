@@ -26,7 +26,7 @@ describe('action tests', () => {
 
   it('should remove an image from state', () => {
 
-    const newState = onDelete(1, testState);
+    const newState = onDelete(testState, 1);
     const checkState = { ...testState };
     checkState.images = testState.images.slice();
     checkState.images.shift();

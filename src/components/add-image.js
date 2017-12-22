@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class AddImage extends PureComponent {
   render() {
-    const { handleAdd } = this.props;
+    const { handleAdd, albumId } = this.props;
     return (
       <form onSubmit={event => {
         event.preventDefault();
@@ -11,12 +11,13 @@ export default class AddImage extends PureComponent {
         const imageData = {
           title: elements.title.value,
           url: elements.url.value,
-          description: elements.description.value
+          description: elements.description.value,
+          album: albumId
         };
         handleAdd(imageData);
         elements.title.value = '';
-        elements.title.url = '';
-        elements.title.description = '';
+        elements.url.value = '';
+        elements.description.value = '';
       }}>
         <label>Title: </label>
         <input name="title" type="text" />

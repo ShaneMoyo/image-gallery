@@ -43,10 +43,7 @@ exports[`components should render Gallery component 1`] = `
     type="button"
     value="next"
   />
-  <input
-    type="button"
-    value="No back"
-  />
+  <br />
   <img
     alt="Isn't it fuzzy-wuzzy cutest thing you've ever seen?"
     height="40%"
@@ -63,66 +60,57 @@ exports[`components should render List component 1`] = `
       <tr
         key="0"
       >
-        <a
-          href="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
-        >
-          Cute Bunny
-          :
-        </a>
         <td>
-          Description: 
-          Isn't it fuzzy-wuzzy cutest thing you've ever seen?
+          <a
+            href="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
+          >
+            Cute Bunny
+          </a>
         </td>
         <td>
           <input
             data-value={1}
             onClick={[Function]}
             type="button"
-            value="remove"
+            value="X"
           />
         </td>
       </tr>
       <tr
         key="1"
       >
-        <a
-          href="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg"
-        >
-          Cute Bunny2
-          :
-        </a>
         <td>
-          Description: 
-          Isn't it fuzzy-wuzzy cutest thing you've ever seen?
+          <a
+            href="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg"
+          >
+            Cute Bunny2
+          </a>
         </td>
         <td>
           <input
             data-value={2}
             onClick={[Function]}
             type="button"
-            value="remove"
+            value="X"
           />
         </td>
       </tr>
       <tr
         key="2"
       >
-        <a
-          href="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg"
-        >
-          Cute Bunny3
-          :
-        </a>
         <td>
-          Description: 
-          Isn't it fuzzy-wuzzy cutest thing you've ever seen?
+          <a
+            href="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg"
+          >
+            Cute Bunny3
+          </a>
         </td>
         <td>
           <input
             data-value={3}
             onClick={[Function]}
             type="button"
-            value="remove"
+            value="X"
           />
         </td>
       </tr>
@@ -192,56 +180,4 @@ exports[`components should render Thumbnail component 1`] = `
     />
   </li>
 </ul>
-`;
-
-exports[`components should render View component 1`] = `
-<BrowserRouter>
-  <div>
-    <nav>
-      <li>
-        <HeaderLink
-          exact={true}
-          to="/images/gallery"
-        >
-          Gallery
-        </HeaderLink>
-      </li>
-      <li>
-        <HeaderLink
-          to="/images/list"
-        >
-          List
-        </HeaderLink>
-      </li>
-      <li>
-        <HeaderLink
-          to="/images/thumbnail"
-        >
-          Thumbnail
-        </HeaderLink>
-      </li>
-    </nav>
-    <Switch>
-      <Route
-        exact={true}
-        path="/images/gallery"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        path="/images/thumbnail"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        path="/images/list"
-        render={[Function]}
-      />
-      <Redirect
-        push={false}
-        to="/images/gallery"
-      />
-    </Switch>
-  </div>
-</BrowserRouter>
 `;

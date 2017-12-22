@@ -2,13 +2,10 @@
 import React from 'react';
 import { NavLink  } from 'react-router-dom';
 
-
 const HeaderLink = props => <NavLink {...props} 
   className="nav-link" 
   activeClassName="active"
 />;
-
-
 
 export default function Header() {
   return (
@@ -19,7 +16,7 @@ export default function Header() {
           <HeaderLink exact to="/">Home</HeaderLink>
         </li>
         <li>
-          <HeaderLink to="/images">images</HeaderLink>
+          <HeaderLink to="/albums">albums</HeaderLink>
         </li>
         <li>
           <HeaderLink to="/about">about</HeaderLink>
